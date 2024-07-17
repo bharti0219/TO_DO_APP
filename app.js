@@ -15,12 +15,22 @@ btn.addEventListener("click",function(){
       inp.value="";
 });
    
-let dltbtns =document.querySelectorAll(".delete");
-for(dltbtn of dltbtns){
-    dltbtn.addEventListener("click",function(){
-      let par=this.parentElement;
-      console.log(par);
-      par.remove();
-});
-}
+// let dltbtns =document.querySelectorAll(".delete");
+// for(dltbtn of dltbtns){
+//     dltbtn.addEventListener("click",function(){
+//       let par=this.parentElement;
+//       console.log(par);
+//       par.remove();
+// });
+// }
 
+ul.addEventListener("click",function(event)
+      {
+         if(event.target.nodeName=="BUTTON")
+         {
+            event.target.parentElement.remove();
+          
+
+         }
+      }
+);
